@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="es" dir="ltr">
+  <head>
+    <!-- Configuración básica -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <!-- Favicon (recomendado múltiples formatos) -->
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+      <style>
+    :root {
+      --font-heading: 'Prosto One', sans-serif;
+      --font-special: 'Gruppo', cursive;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+    
+    <!-- Preconexión y precarga de recursos críticos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Prosto+One&family=Gruppo&family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Prosto+One&family=Gruppo&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
+    
+    <!-- Título optimizado (55-60 caracteres) -->
+    <title>Nova Marketing | Agencia de Marketing Digital en [Ciudad]</title>
+    
+    <!-- Meta descripción persuasiva (150-160 caracteres) -->
+    <meta name="description" content="Agencia de marketing digital en [Ciudad]. Estrategias personalizadas para PYMES y emprendedores. SEO, redes sociales y publicidad online. ¡Primera consulta gratis!">
+    
+    <!-- Canonical URL (importante para evitar contenido duplicado) -->
+    <link rel="canonical" href="https://www.novamarketing.com/" />
+    
+    <!-- Schema.org para rich snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Nova Marketing",
+      "image": "https://www.novamarketing.com/images/logo.jpg",
+      "@id": "https://www.novamarketing.com/#agency",
+      "url": "https://www.novamarketing.com/",
+      "telephone": "+34-123-456-789",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Ejemplo 123",
+        "addressLocality": "[Ciudad]",
+        "postalCode": "28001",
+        "addressCountry": "ES"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.416775,
+        "longitude": -3.703790
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/novamarketing",
+        "https://www.instagram.com/novamarketing",
+        "https://www.linkedin.com/company/novamarketing"
+      ]
+    }
+    </script>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nova Marketing | Agencia de Marketing Digital en [Ciudad]" />
+    <meta property="og:description" content="Agencia especializada en marketing digital para PYMES. Estrategias personalizadas de SEO, redes sociales y publicidad online." />
+    <meta property="og:url" content="https://www.novamarketing.com/" />
+    <meta property="og:site_name" content="Nova Marketing" />
+    <meta property="og:image" content="https://www.novamarketing.com/images/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Nova Marketing - Transformamos tu presencia digital" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@novamarketing" />
+    <meta name="twitter:creator" content="@novamarketing" />
+    <meta name="twitter:title" content="Nova Marketing | Agencia de Marketing Digital en [Ciudad]" />
+    <meta name="twitter:description" content="Expertos en marketing digital para hacer crecer tu negocio online. Consultoría gratuita." />
+    <meta name="twitter:image" content="https://www.novamarketing.com/images/twitter-card.jpg" />
+    
+    <!-- Robots (control de indexación) -->
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    
+    <!-- Verificación de Google Search Console -->
+    <meta name="google-site-verification" content="tu-codigo-de-verificacion" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Prefetch para recursos importantes -->
+    <link rel="prefetch" href="/src/pages/contacto.js" as="script">
+    <link rel="prefetch" href="/src/pages/servicios.js" as="script">
+    
+    <!-- Preload para imágenes críticas -->
+    <link rel="preload" href="/images/hero-banner.webp" as="image" imagesrcset="/images/hero-banner-480.webp 480w, /images/hero-banner-800.webp 800w" imagesizes="(max-width: 600px) 480px, 800px">
+  </body>
+</html>

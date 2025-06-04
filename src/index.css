@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Light theme colors */
+  --color-primary: 59 130 246; /* Blue */
+  --color-secondary: 139 92 246; /* Purple */
+  --color-accent: 249 115 22; /* Orange */
+  --color-success: 34 197 94; /* Green */
+  --color-warning: 234 179 8; /* Yellow */
+  --color-error: 239 68 68; /* Red */
+  --color-info: 6 182 212; /* Cyan */
+  --color-purple: 168 85 247; /* Purple */
+  --color-pink: 236 72 153; /* Pink */
+  --color-indigo: 79 70 229; /* Indigo */
+  --color-teal: 20 184 166; /* Teal */
+  --color-emerald: 16 185 129; /* Emerald */
+  --color-rose: 225 29 72; /* Rose */
+  --color-amber: 245 158 11; /* Amber */
+  
+  /* Light theme specific */
+  --color-light-bg: 248 250 252; /* Slate 50 */
+  --color-light-bg-secondary: 241 245 249; /* Slate 100 */
+  --color-light-text: 15 23 42; /* Slate 900 */
+  --color-light-text-secondary: 71 85 105; /* Slate 600 */
+  
+  /* Dark theme specific */
+  --color-dark-bg: 15 23 42; /* Slate 900 */
+  --color-dark-bg-secondary: 30 41 59; /* Slate 800 */
+  --color-dark-text: 248 250 252; /* Slate 50 */
+  --color-dark-text-secondary: 203 213 225; /* Slate 300 */
+}
+
+/* Light theme overrides */
+:root {
+  --shadow-color: 220 3% 15%;
+  --shadow-strength: 1%;
+}
+
+/* Dark theme overrides */
+:root[class~="dark"] {
+  --shadow-color: 220 40% 2%;
+  --shadow-strength: 25%;
+  
+  --color-primary: 96 165 250; /* Lighter blue */
+  --color-secondary: 167 139 250; /* Lighter purple */
+  --color-accent: 251 146 60; /* Lighter orange */
+  --color-success: 74 222 128; /* Lighter green */
+  --color-warning: 250 204 21; /* Lighter yellow */
+  --color-error: 248 113 113; /* Lighter red */
+  --color-info: 34 211 238; /* Lighter cyan */
+  --color-purple: 192 132 252; /* Lighter purple */
+  --color-pink: 244 114 182; /* Lighter pink */
+  --color-indigo: 129 140 248; /* Lighter indigo */
+  --color-teal: 45 212 191; /* Lighter teal */
+  --color-emerald: 52 211 153; /* Lighter emerald */
+  --color-rose: 251 113 133; /* Lighter rose */
+  --color-amber: 252 196 25; /* Lighter amber */
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply font-sans antialiased;
+  cursor: none;
+}
+
+@layer base {
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl font-bold leading-tight;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl font-semibold leading-tight;
+  }
+  
+  h4 {
+    @apply text-xl md:text-2xl font-semibold leading-tight;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-lg font-medium transition-all duration-300 cursor-none;
+  }
+
+  .btn-primary {
+    @apply btn bg-primary hover:bg-primary/90 text-white;
+  }
+
+  .btn-secondary {
+    @apply btn bg-secondary hover:bg-secondary/90 text-white;
+  }
+  
+  .btn-accent {
+    @apply btn bg-accent hover:bg-accent/90 text-white;
+  }
+
+  .btn-info {
+        /* If not using Tailwind, replace with equivalent CSS: */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+        border-radius: 0.5rem;
+        font-weight: 500;
+        transition-property: all;
+        transition-duration: 300ms;
+        cursor: none;
+        background-color: rgb(var(--color-info));
+        color: #fff;
+    }
+    .btn-info:hover {
+        background-color: rgba(var(--color-info), 0.9);
+  }
+
+  .btn-purple {
+    @apply btn bg-purple hover:bg-purple/90 text-white;
+  }
+
+  .btn-pink {
+    @apply btn bg-pink hover:bg-pink/90 text-white;
+  }
+
+  .btn-indigo {
+    @apply btn bg-indigo hover:bg-indigo/90 text-white;
+  }
+
+  .btn-teal {
+    @apply btn bg-teal hover:bg-teal/90 text-white;
+  }
+
+  .btn-emerald {
+    @apply btn bg-emerald hover:bg-emerald/90 text-white;
+  }
+
+  .btn-rose {
+    @apply btn bg-rose hover:bg-rose/90 text-white;
+  }
+
+  .btn-amber {
+    @apply btn bg-amber hover:bg-amber/90 text-white;
+  }
+
+  .btn-outline {
+    @apply btn border-2 border-primary text-primary hover:bg-primary hover:text-white dark:border-primary/80 dark:text-primary/80;
+  }
+
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+  
+  .card {
+    @apply bg-white dark:bg-dark-bg-secondary rounded-xl shadow-lg transition-all duration-300;
+  }
+
+  /* Dark mode specific styles */
+  .dark .card {
+    @apply shadow-[0_4px_6px_-1px_rgba(0,0,0,0.3),0_2px_4px_-2px_rgba(0,0,0,0.2)];
+    background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0));
+  }
+
+  .dark .btn {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  }
+
+  .dark .section-gradient {
+    background-image: radial-gradient(circle at center, rgba(var(--color-primary), 0.05) 0%, transparent 70%);
+  }
+}
